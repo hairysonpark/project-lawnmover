@@ -143,19 +143,31 @@ public:
 };
 
 // Algorithm that sorts disks using the alternate algorithm.
+//Bubble Sorting
 sorted_disks sort_alternate(const disk_state& before) {
 	int numOfSwap = 0;                                                                      //record # of step swap
- 
-          }
-
+  disk_state state = before;
+  //state.to_string();
+  for(size_t i = 0; i < state.is_index(i); i++) {
+    for(size_t j = 0; j < state.is_index(j); j++) {
+      std::cout << state.is_index(i);
+      std::cout << state.is_index(i + 1);
+      if(state.get(i) > state.get(i + 1)){
+        state.swap(i);
+        state.swap(i+1);
+        numOfSwap++;
+      }
+    }
+  }
   return sorted_disks(disk_state(state), numOfSwap);
 }
 
 
 // Algorithm that sorts disks using the lawnmower algorithm.
 sorted_disks sort_lawnmower(const disk_state& before) {
-  	
-	  }
+  	int numOfSwap = 0;
+    disk_state state = before;
+	  
 
   return sorted_disks(disk_state(state), numOfSwap);
 }
